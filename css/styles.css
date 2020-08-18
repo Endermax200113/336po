@@ -22,22 +22,27 @@ body {
   font-family: "Roboto", sans-serif; }
 
 .header {
+  position: fixed;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   width: 100%;
-  height: 50px;
+  height: 75px;
+  max-height: 75px;
   background-color: #0af; }
+  .header.empty {
+    position: relative;
+    visibility: hidden;
+    z-index: -9999; }
 
-.content {
+.main {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   width: 100%;
-  height: 50px;
-  background-color: #0fa; }
+  height: 50px; }
 
 .footer {
   -webkit-box-flex: 0;
@@ -45,5 +50,11 @@ body {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   width: 100%;
-  height: 50px;
-  background-color: #f66; }
+  height: 50px; }
+
+@media only screen and (min-width: 2561px) {
+  body {
+    max-width: 4096px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden; } }
