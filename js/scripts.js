@@ -47,4 +47,10 @@ var version = "0.0.0";
 $(document).ready(() => {
 	console.log("Версия сайта: " + version);
 	console.info("Сайт только для группы 336-ПО");
+
+	setMenuHere();
 });
+
+function setMenuHere() {
+	if ($("input").is("#page-main")) $("#menu-link-1").addClass("here");
+}
